@@ -5,7 +5,7 @@ $(EXE): com/craftinginterpreters/lox/*.class
 	jar cfe Main.jar com.craftinginterpreters.lox.Lox $^
 
 %.class: %.java
-	javac $?
+	javac -g $?
 
 run: $(EXE)
 	java -jar  $(EXE)
