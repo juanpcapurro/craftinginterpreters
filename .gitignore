@@ -1,3 +1,4 @@
 *.class
-*.java
 tags
+Main.jar
+prog.lox
