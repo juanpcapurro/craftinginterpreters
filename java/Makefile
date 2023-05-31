@@ -4,11 +4,12 @@ ENUM_USING_OBJS=com/craftinginterpreters/lox/Parser$$1.class com/craftinginterpr
 STATIC_EXPR_OBJS=com/craftinginterpreters/lox/Expr$$Binary.class com/craftinginterpreters/lox/Expr$$Grouping.class \
 								com/craftinginterpreters/lox/Expr$$Literal.class com/craftinginterpreters/lox/Expr$$Unary.class \
 								com/craftinginterpreters/lox/Expr$$Visitor.class com/craftinginterpreters/lox/Expr$$Variable.class \
-								com/craftinginterpreters/lox/Expr$$Assign.class
+								com/craftinginterpreters/lox/Expr$$Assign.class com/craftinginterpreters/lox/Expr$$Logical.class
 
 STATIC_STMT_OBJS=com/craftinginterpreters/lox/Stmt$$Print.class com/craftinginterpreters/lox/Stmt$$Var.class \
 								com/craftinginterpreters/lox/Stmt$$Expression.class com/craftinginterpreters/lox/Stmt$$Visitor.class \
-								com/craftinginterpreters/lox/Stmt$$Block.class
+								com/craftinginterpreters/lox/Stmt$$Block.class com/craftinginterpreters/lox/Stmt$$If.class \
+								com/craftinginterpreters/lox/Stmt$$While.class
 
 OBJS=com/craftinginterpreters/lox/Expr.class com/craftinginterpreters/lox/Interpreter.class\
 		 com/craftinginterpreters/lox/Lox.class com/craftinginterpreters/lox/Parser.class\
