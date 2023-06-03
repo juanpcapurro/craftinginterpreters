@@ -58,9 +58,6 @@ public class Lox {
     // Stop if there was a syntax error.
     if (hadError) return;
 
-    // System.out.println("----- BEGIN RPNP -----");
-    // System.out.println(new RPNPrinter().print(statements));
-    // System.out.println("------ END RPNP ------");
     interpreter.interpret(statements);
   }
 
