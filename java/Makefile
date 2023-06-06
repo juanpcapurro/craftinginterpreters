@@ -14,7 +14,7 @@ STATIC_STMT_OBJS=com/craftinginterpreters/lox/Stmt$$Print.class com/craftinginte
 OBJS=com/craftinginterpreters/lox/Expr.class com/craftinginterpreters/lox/Interpreter.class\
 		 com/craftinginterpreters/lox/Lox.class com/craftinginterpreters/lox/Parser.class\
 		 com/craftinginterpreters/lox/Parser$$ParseError.class com/craftinginterpreters/lox/Stmt.class \
-		 com/craftinginterpreters/lox/RPNPrinter.class com/craftinginterpreters/lox/RuntimeError.class\
+		  com/craftinginterpreters/lox/RuntimeError.class\
 		 com/craftinginterpreters/lox/Scanner.class com/craftinginterpreters/lox/Token.class\
 		 com/craftinginterpreters/lox/TokenType.class com/craftinginterpreters/lox/Environment.class\
 		 $(ENUM_USING_OBJS) $(STATIC_STMT_OBJS) $(STATIC_EXPR_OBJS)
