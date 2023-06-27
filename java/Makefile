@@ -1,6 +1,7 @@
 EXE=Main.jar
 ENTRYPOINT=com.craftinginterpreters.lox.Lox
-ENUM_USING_OBJS=com/craftinginterpreters/lox/Parser$$1.class com/craftinginterpreters/lox/Interpreter$$1.class com/craftinginterpreters/lox/Interpreter$$2.class
+ENUM_USING_OBJS=com/craftinginterpreters/lox/Parser$$1.class com/craftinginterpreters/lox/Interpreter$$1.class com/craftinginterpreters/lox/Interpreter$$2.class com/craftinginterpreters/lox/Resolver$$FunctionType.class
+
 STATIC_EXPR_OBJS=com/craftinginterpreters/lox/Expr$$Binary.class com/craftinginterpreters/lox/Expr$$Grouping.class \
 								com/craftinginterpreters/lox/Expr$$Literal.class com/craftinginterpreters/lox/Expr$$Unary.class \
 								com/craftinginterpreters/lox/Expr$$Visitor.class com/craftinginterpreters/lox/Expr$$Variable.class \
@@ -22,6 +23,7 @@ OBJS=com/craftinginterpreters/lox/Expr.class com/craftinginterpreters/lox/Interp
 		 com/craftinginterpreters/lox/Scanner.class com/craftinginterpreters/lox/Token.class\
 		 com/craftinginterpreters/lox/TokenType.class com/craftinginterpreters/lox/Environment.class\
 		 com/craftinginterpreters/lox/LoxCallable.class com/craftinginterpreters/lox/LoxFunction.class\
+		 com/craftinginterpreters/lox/Resolver.class\
 		 $(ENUM_USING_OBJS) $(STATIC_STMT_OBJS) $(STATIC_EXPR_OBJS)
 
 
@@ -32,6 +34,9 @@ $(EXE): $(OBJS)
 	javac -g $?
 
 com/craftinginterpreters/lox/Expr$$%.class: com/craftinginterpreters/lox/Expr.java
+	javac -g $?
+
+com/craftinginterpreters/lox/Resolver$$FunctionType.class: com/craftinginterpreters/lox/Resolver.java
 	javac -g $?
 
 com/craftinginterpreters/lox/Stmt$$%.class: com/craftinginterpreters/lox/Stmt.java
