@@ -1,19 +1,21 @@
 EXE=Main.jar
 ENTRYPOINT=com.craftinginterpreters.lox.Lox
-ENUM_USING_OBJS=com/craftinginterpreters/lox/Parser$$1.class com/craftinginterpreters/lox/Interpreter$$1.class com/craftinginterpreters/lox/Interpreter$$2.class com/craftinginterpreters/lox/Resolver$$FunctionType.class
+ENUM_USING_OBJS=com/craftinginterpreters/lox/Parser$$1.class com/craftinginterpreters/lox/Interpreter$$1.class com/craftinginterpreters/lox/Interpreter$$2.class com/craftinginterpreters/lox/Resolver$$FunctionType.class com/craftinginterpreters/lox/Resolver$$ClassType.class
 
 STATIC_EXPR_OBJS=com/craftinginterpreters/lox/Expr$$Binary.class com/craftinginterpreters/lox/Expr$$Grouping.class \
 								com/craftinginterpreters/lox/Expr$$Literal.class com/craftinginterpreters/lox/Expr$$Unary.class \
 								com/craftinginterpreters/lox/Expr$$Visitor.class com/craftinginterpreters/lox/Expr$$Variable.class \
 								com/craftinginterpreters/lox/Expr$$Assign.class com/craftinginterpreters/lox/Expr$$Logical.class\
-								com/craftinginterpreters/lox/Expr$$Call.class
+								com/craftinginterpreters/lox/Expr$$Call.class com/craftinginterpreters/lox/Expr$$Get.class\
+								com/craftinginterpreters/lox/Expr$$Set.class com/craftinginterpreters/lox/Expr$$This.class
 
 
 STATIC_STMT_OBJS=com/craftinginterpreters/lox/Stmt$$Print.class com/craftinginterpreters/lox/Stmt$$Var.class \
 								com/craftinginterpreters/lox/Stmt$$Expression.class com/craftinginterpreters/lox/Stmt$$Visitor.class \
 								com/craftinginterpreters/lox/Stmt$$Block.class com/craftinginterpreters/lox/Stmt$$If.class \
 								com/craftinginterpreters/lox/Stmt$$While.class com/craftinginterpreters/lox/Stmt$$Function.class\
-								com/craftinginterpreters/lox/Stmt$$Return.class com/craftinginterpreters/lox/Return.class
+								com/craftinginterpreters/lox/Stmt$$Return.class com/craftinginterpreters/lox/Return.class\
+								com/craftinginterpreters/lox/Stmt$$Class.class
 
 
 OBJS=com/craftinginterpreters/lox/Expr.class com/craftinginterpreters/lox/Interpreter.class\
@@ -23,7 +25,8 @@ OBJS=com/craftinginterpreters/lox/Expr.class com/craftinginterpreters/lox/Interp
 		 com/craftinginterpreters/lox/Scanner.class com/craftinginterpreters/lox/Token.class\
 		 com/craftinginterpreters/lox/TokenType.class com/craftinginterpreters/lox/Environment.class\
 		 com/craftinginterpreters/lox/LoxCallable.class com/craftinginterpreters/lox/LoxFunction.class\
-		 com/craftinginterpreters/lox/Resolver.class\
+		 com/craftinginterpreters/lox/Resolver.class com/craftinginterpreters/lox/LoxClass.class\
+		 com/craftinginterpreters/lox/LoxInstance.class\
 		 $(ENUM_USING_OBJS) $(STATIC_STMT_OBJS) $(STATIC_EXPR_OBJS)
 
 
@@ -36,7 +39,7 @@ $(EXE): $(OBJS)
 com/craftinginterpreters/lox/Expr$$%.class: com/craftinginterpreters/lox/Expr.java
 	javac -g $?
 
-com/craftinginterpreters/lox/Resolver$$FunctionType.class: com/craftinginterpreters/lox/Resolver.java
+com/craftinginterpreters/lox/Resolver$$%.class: com/craftinginterpreters/lox/Resolver.java
 	javac -g $?
 
 com/craftinginterpreters/lox/Stmt$$%.class: com/craftinginterpreters/lox/Stmt.java
