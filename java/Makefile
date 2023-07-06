@@ -7,7 +7,8 @@ STATIC_EXPR_OBJS=com/craftinginterpreters/lox/Expr$$Binary.class com/craftingint
 								com/craftinginterpreters/lox/Expr$$Visitor.class com/craftinginterpreters/lox/Expr$$Variable.class \
 								com/craftinginterpreters/lox/Expr$$Assign.class com/craftinginterpreters/lox/Expr$$Logical.class\
 								com/craftinginterpreters/lox/Expr$$Call.class com/craftinginterpreters/lox/Expr$$Get.class\
-								com/craftinginterpreters/lox/Expr$$Set.class com/craftinginterpreters/lox/Expr$$This.class
+								com/craftinginterpreters/lox/Expr$$Set.class com/craftinginterpreters/lox/Expr$$This.class\
+								com/craftinginterpreters/lox/Expr$$Super.class
 
 
 STATIC_STMT_OBJS=com/craftinginterpreters/lox/Stmt$$Print.class com/craftinginterpreters/lox/Stmt$$Var.class \
